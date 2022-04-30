@@ -1,2 +1,1 @@
-#gunicorn --worked-tmp-dir /dev/shm app:app
-python-3.7.13
+python=3.7.13
