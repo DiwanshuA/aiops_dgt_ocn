@@ -5,7 +5,7 @@ import uuid
 
 EXPERIMENT_ID = str(uuid.uuid4())
 CURRENT_TIMESTAMP = datetime.now().strftime('%Y%m%d%H%M%S')
-FILENAME = f"log_{CURRENT_TIMESTAMP}.log"
+FILENAME = f"log_{EXPERIMENT_ID}.log"
 
 LOG_DIR = "logs"
 LOG_DIR = os.path.join(os.getcwd(), LOG_DIR)
@@ -13,10 +13,9 @@ os.makedirs(LOG_DIR, exist_ok=True)
 LOG_FILE_PATH = os.path.join(LOG_DIR, FILENAME)
 
 logging.basicConfig(filename=LOG_FILE_PATH,
-                    filemode="w",
-                    format='[%(asctime)s] - %(name) - %(level) - %(message)',
+                    filemode='w',
+                    format='[%(asctime)s] %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
-
 
 def log_function_signature(func):
     def inner(*args, **kwargs):
@@ -31,11 +30,3 @@ def log_function_signature(func):
         return response
 
     return inner
-
-
-def print_text(text):
-    print(text)
-
-
-if __name__ == "__maim__":
-    print_text(Diwanshu)
