@@ -1,1 +1,1 @@
-Building Pipelines on Digital Ocean App platform
+Building LSTM based Text Classification Pipelines on Digital Ocean App platform
