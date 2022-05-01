@@ -17,7 +17,7 @@ def get_requirements_list(requirement_file_name=REQUIREMENT_FILE_NAME) -> list:
 
 setup(
     name='Text-Classification-using-LSTM',
-    version=0.0.1,
+    version='0.0.1',
     license='MIT',
     description='This project is for Text Classification using LSTM',
     author='Diwanshu Asthana',
