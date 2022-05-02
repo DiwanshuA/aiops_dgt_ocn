@@ -5,7 +5,9 @@ DatasetConfig = namedtuple("DatasetConfig", ["name",
                                              "batch",
                                              "buffer_size"])
 
-#Validation config has to be added
+# Validation config has to be added
+DataValidationConfig = namedtuple("DataValidationConfig", ["file_extension",
+                                                           "schema"])
 
 PreprocessingConfig = namedtuple("PreprocessingConfig", ["vocal_size"])
 
