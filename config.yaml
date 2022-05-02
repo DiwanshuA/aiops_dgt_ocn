@@ -1,0 +1,28 @@
+
+dataset:
+  name: imdb_reviews
+  schema: dataset.yaml
+  buffer_size: 1000
+  batch_size: 64
+
+# validation config to be added
+
+preprocessing:
+  vocab_size: 1000
+
+train_config:
+  model_root_dir: model
+  model_save_dir: trained_model/saved_model
+  model_checkpoint_dir: checkpoint_dir
+  epoch: 10
+  tensorboard_log_dir: tensorboard_log_dir
+  base_accuracy: 0.6
+  validation_step: 30
+
+training_pipeline_config:
+  artifacts_dir: artifacts
+
+# model deployment config to be added
+
+
+
